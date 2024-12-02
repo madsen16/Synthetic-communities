@@ -2,6 +2,7 @@
 2. Consolidate all files into desired directory then modify first line of R code to reach that directory.
 3. Download all needed packages.
 4. Run first 58 lines of code to generate PCAs needed for visuals.
+Note: will need to add in directory to line 15 to read in extra metadata file
 5. Lines of code 60-82 generate a visual of all total samples without the ability to select specific parameters to view.
 6. The remaining code generates the 3D visuals that can be controlled based on the desired parameters.
 Note: the PCA number must be changed in the PCA dataframe to visulize the different beta diversity metrics
