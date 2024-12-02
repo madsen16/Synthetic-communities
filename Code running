@@ -1,4 +1,5 @@
 1. Start by downloading R file, phyloseq object and extra metadata files.
 2. Consolidate all files into desired directory then modify first line of R code to reach that directory.
 3. Download all needed packages.
+Note: will need to add in directory to line 20 to read in extra metadata file
 4. Simply run all code then select desired conditions to visualize as a composition profile.
