@@ -63,12 +63,16 @@ merged_data_longer$genus[is.na(merged_data_longer$genus)] <- "Unknown"
 
 merged_data_longer$family[is.na(merged_data_longer$family)] <- "Unknown"
 
+sample_data <- sample_data(p99.comp)
+
 compositional_data_with_metadata <- merged_data_longer
 compositional_data_with_metadata$Soil <- sample_data$Soil[match(compositional_data_with_metadata$Sample, sample_data$Sample)]
 compositional_data_with_metadata$Media.type <- sample_data$Media.type[match(compositional_data_with_metadata$Sample, sample_data$Sample)]
 compositional_data_with_metadata$Engraft <- sample_data$Engraft[match(compositional_data_with_metadata$Sample, sample_data$Sample)]
 compositional_data_with_metadata$Well_plate <- sample_data$Well_plate[match(compositional_data_with_metadata$Sample, sample_data$Sample)]
 compositional_data_with_metadata$Modified_Sample_Names <- sample_data$Modified_Sample_Names[match(compositional_data_with_metadata$Sample, sample_data$Sample)]
+
+getPalette <- colorRampPalette(brewer.pal(9, "Set1"))
 
 # Determine the taxonomic levels available
 available_tax_levels <- c("domain", "phylum", "class", "order", "family", "genus")
